@@ -1,0 +1,9 @@
+const catchAsync = (fn) => {
+  return (req, res, next) => {
+    fn(req, res, next).catch(next);
+    // Promise.resolve(fn(req, res, next).catch(next));
+    // .catch(err => next(err)) is just shorthand .catch(next).
+  };
+};
+
+export default catchAsync;
