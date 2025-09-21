@@ -43,14 +43,15 @@ function Tasks({ data, onDeleteTask, checkBox }) {
     <li>
       <input
         type="checkbox"
-        value={data.done}
+        style={{ accentColor: "#007bff" }}
+        checked={data.done}
         onChange={() => checkBox(data.id)}
         key={data.id}
       />
       <span style={data.done ? { textDecoration: "line-through" } : {}}>
         {data.quantity} {data.description}
       </span>
-      <button onClick={() => onDeleteTask(data.id)}>❌</button>
+      <button onClick={() => onDeleteTask(data.id)}>✖️</button>
     </li>
   );
 }
