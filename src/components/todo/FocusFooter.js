@@ -19,15 +19,16 @@ export default function FocusFooter({ tasks }) {
         }${minutes}min of focused work left.`;
 
   return (
+    // <footer className="mt-8 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm shadow-slate-200/80 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
     <footer
-      className="mt-8 rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 shadow-md shadow-slate-200/70 backdrop-blur
-                  dark:border-slate-800/80 dark:bg-gradient-to-r dark:from-slate-950/95 dark:via-slate-900/95 dark:to-slate-950/95
-                  dark:shadow-[0_0_45px_rgba(34,197,235,0.35)]"
+      className="mt-8 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm shadow-slate-200/80 backdrop-blur-sm
+                  dark:border-slate-800 dark:bg-slate-900 dark:shadow-none
+                  sm:px-5 sm:py-4 lg:px-6 lg:py-5"
     >
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         {/* Left: progress text */}
         <div className="space-y-1">
-          <p className="text-sm font-medium text-slate-800">
+          <p className="text-sm font-medium text-slate-6  00">
             Today&apos;s focus snapshot
           </p>
           <p className="text-xs text-slate-500">
@@ -51,7 +52,7 @@ export default function FocusFooter({ tasks }) {
           </div>
           <div className="h-2 w-full rounded-full bg-slate-200 dark:bg-slate-800">
             <div
-              className="h-2 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-400 to-fuchsia-500 transition-[width] duration-300"
+              className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-400 transition-[width] duration-300 dark:from-indigo-400 dark:to-indigo-300"
               style={{ width: `${percent}%` }}
             />
           </div>

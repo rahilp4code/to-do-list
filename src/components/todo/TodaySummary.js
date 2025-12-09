@@ -48,10 +48,11 @@ export default function TodaySummary({ tasks }) {
   const label = mode === "today" ? "Today" : "This week";
 
   return (
+    // <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/80 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
     <section
-      className="rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-xl shadow-slate-200/70 backdrop-blur
-                    dark:border-slate-800/80 dark:bg-gradient-to-br dark:from-[#020617] dark:via-[#020617] dark:to-slate-900
-                    dark:shadow-[0_0_40px_rgba(59,130,246,0.35)]"
+      className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm shadow-sm shadow-slate-200/70
+                    dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-none
+                    sm:p-5 lg:p-6"
     >
       <div className="mb-3 flex items-center justify-between gap-3">
         <h3 className="text-sm font-semibold tracking-wide text-slate-900 dark:text-slate-50">
@@ -107,6 +108,12 @@ export default function TodaySummary({ tasks }) {
           <p className="text-slate-700 dark:text-slate-200">
             <span className="font-semibold">{done}</span> of{" "}
             <span className="font-semibold">{total}</span> tasks done.
+            <span
+              className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700
+                 dark:bg-slate-800 dark:text-slate-200"
+            >
+              {percent}% complete
+            </span>
           </p>
           {nextTask ? (
             <p className="text-slate-500 dark:text-slate-400">

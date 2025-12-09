@@ -1,4 +1,3 @@
-// tailwind.config.js
 module.exports = {
   darkMode: "class",
   content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
@@ -11,11 +10,7 @@ module.exports = {
         },
       },
       animation: {
-        "fade-in-up": "fade-in-up 0.22s ease-out",
-      },
-      boxShadow: {
-        neon: "0 0 35px rgba(52, 211, 235, 0.35)", // cyan glow
-        "neon-purple": "0 0 35px rgba(129, 140, 248, 0.35)", // indigo glow
+        "fade-in-up": "fade-in-up 0.2s ease-out",
       },
     },
   },
